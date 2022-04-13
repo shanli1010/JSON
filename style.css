@@ -1,0 +1,39 @@
+body {
+  font-family: 'Helvetica', sans-serif;
+  margin: 3% 3% 3% 3%;
+  background-image: url(pinterest.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+
+h1{
+  font-family: 'Helvetica', sans-serif;
+  text-align: center;
+  font-weight: bold;
+  font-size: 100px;
+  color: white;
+  text-shadow: 8px 2px grey;
+  margin: auto;
+  padding: auto;
+}
+
+h2{
+  font-family: 'Helvetica', sans-serif;
+  text-align: center;
+  font-size: 70px;
+  color: white;
+  text-shadow: 8px 2px grey;
+  margin: auto;
+  padding: auto;
+}
+
+h3{
+  font-family: 'Helvetica', sans-serif;
+  text-align: center;
+  font-size: 50px;
+  color: white;
+  margin: auto;
+  padding: auto;
+}
