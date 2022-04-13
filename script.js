@@ -6,38 +6,40 @@ function printToPage(incoming) {
 
 let jsonDatabase = [
   {
-    "Genre" : "Hip-Hop/Rap"
-    "Song" : "Leray",
+    "Genre" : "Hip-Hop/Rap",
+    "Title" : "Leray",
     "AlbumCover" : "Leray.jpg",
-    "Artist" : "Trippie Redd",
+    "Artist" : "Trippie Redd"
   },
   {
-    "Genre" : "R&B/Soul"
-    "Song" : "SLOW DANCING IN THE DARK",
+    "Genre" : "R&B/Soul",
+    "Title" : "SLOW DANCING IN THE DARK",
     "AlbumCover" : "joji.jpg",
-    "Artist" : "Joji",
+    "Artist" : "Joji"
   },
   {
-    "Genre" : "Alternative Rock"
-    "Song" : "Check Yes, Juliet",
+    "Genre" : "Alt Rock",
+    "Title" : "Check Yes, Juliet",
     "AlbumCover" : "WeTheKings.jpeg",
-    "Artist" : "We The Kings",
+    "Artist" : "We The Kings"
   },
   {
-    "Genre" : "Classical"
-    "Song" : "Clair De Lune",
+    "Genre" : "Classical",
+    "Title" : "Clair De Lune",
     "AlbumCover" : "clairDeLune.jpeg",
-    "Artist" : "Claude Debussy",
+    "Artist" : "Claude Debussy"
+  }
 ]
 
+
 for (var i = 0; i < jsonDatabase.length; i++) {
-  createElement(jsonDatabase[i]);
+  createElements(jsonDatabase[i]);
 }
 
   function createElements(incomingJSON) {
 
     //items
-    let  = document.createElement("div");
+    let contentElement = document.createElement("div");
     contentElement.classList.add('contentItem');
 
     //Genre
@@ -49,16 +51,17 @@ for (var i = 0; i < jsonDatabase.length; i++) {
     //AlbumCover
     let img = document.createElement("IMG");
     img.classList.add('minionsImage');
-    img.src = incomingJSON['imageURL'];
+    img.src = incomingJSON['AlbumCover'];
     contentElement.appendChild(img);
 
     let newList = document.createElement("div");
-    newList.appendChild(newContentSingersList);
+    newList.classList.add('pContain');
+    contentElement.appendChild(newList);
 
     //Title
     let title = document.createElement("H3");
     title.classList.add('contentTitle');
-    title.innerText = "Title: " + incomingJSON['Song'];
+    title.innerText = "Title: " + incomingJSON['Title'];
     contentElement.appendChild(title);
 
     //Artist
